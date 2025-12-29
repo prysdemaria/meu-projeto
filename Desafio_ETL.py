@@ -1,5 +1,9 @@
 import pandas as pd
 import json
+from pathlib import Path
+
+diretorio_atual = Path(__file__).parent
+caminho_csv = diretorio_atual / 'arquivo_ids.csv'
 
 # Parte 1 - EXTRACT - Lê o CSV e converte para uma lista de dicionários
 users = pd.read_csv(r'c:\Users\Pryscilla\Documents\Curso Analise de Dados Santander\Python\arquivo_ids.csv').to_dict(orient='records')
